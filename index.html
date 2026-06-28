@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Celestara AI</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<!-- 🌌 STAR CANVAS -->
+<canvas id="stars"></canvas>
+
+<!-- ⚡ GLITCH OVERLAY -->
+<div id="glitch"></div>
+
+<!-- 🚀 INTRO SEQUENCE -->
+<div id="intro">
+
+  <div class="scanlines"></div>
+  <div class="boot-text">INITIALIZING CELESTARA SYSTEM...</div>
+
+  <div class="star-core"></div>
+
+  <!-- ⭐ YOUR LOGO (INTRO REVEAL) -->
+  <img src="assets/logo.png" class="intro-logo" />
+
+  <div class="energy-burst"></div>
+
+</div>
+
+<!-- 💬 MAIN APP -->
+<div id="app">
+
+  <div class="header">
+    <!-- ⭐ YOUR LOGO (HEADER) -->
+    <img src="assets/logo.png" class="small-logo"/>
+    <h1>CELESTARA AI</h1>
+  </div>
+
+  <div id="chat-box"></div>
+
+  <div class="input-area">
+    <input id="user-input" placeholder="Message Celestara..." />
+    <button onclick="sendMessage()">➤</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
