@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+
+/* 🌌 STARFIELD */
+#stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background: radial-gradient(circle, #050510, black);
+}
+
+/* ⚡ GLITCH LAYER */
+#glitch {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255,255,255,0.03) 3px
+  );
+  animation: flicker 2s infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0%,100% { opacity: 0.2; }
+  50% { opacity: 0.05; }
+}
+
+/* 🚀 INTRO */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #02020a, black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+/* 🧠 SYSTEM BOOT TEXT */
+.boot-text {
+  position: absolute;
+  top: 20%;
+  font-size: 14px;
+  letter-spacing: 4px;
+  opacity: 0.6;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.1; }
+}
+
+/* ⭐ CORE STAR */
+.star-core {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 60px white, 0 0 120px cyan;
+  animation: core 2.5s ease-in-out forwards;
+}
+
+@keyframes core {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(4); opacity: 1; }
+  100% { transform: scale(10); opacity: 0.2; }
+}
+
+/* ⭐ YOUR LOGO INTRO */
+.intro-logo {
+  width: 260px;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: logoIn 3s ease-in-out 2s forwards;
+  filter: drop-shadow(0 0 80px cyan);
+}
+
+@keyframes logoIn {
+  0% { opacity: 0; transform: scale(0.2) rotate(-10deg); }
+  60% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* 💥 ENERGY BURST */
+.energy-burst {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, cyan, transparent);
+  animation: burst 3s ease-out 2.5s forwards;
+}
+
+@keyframes burst {
+  0% { width: 0; height: 0; opacity: 1; }
+  100% { width: 1000px; height: 1000px; opacity: 0; }
+}
+
+/* 💬 APP */
+#app {
+  display: none;
+  height: 100vh;
+  background: radial-gradient(circle, #0b0b2b, black);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+}
+
+.small-logo {
+  width: 40px;
+  margin-right: 10px;
+  filter: drop-shadow(0 0 20px cyan);
+}
+
+#chat-box {
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.message {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 70%;
+}
+
+.user {
+  background: #3b3bff;
+  margin-left: auto;
+}
+
+.ai {
+  background: rgba(255,255,255,0.1);
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px;
+  background: cyan;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
